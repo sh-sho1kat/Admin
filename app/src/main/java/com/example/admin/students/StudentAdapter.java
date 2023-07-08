@@ -88,7 +88,6 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
             gender = itemView.findViewById(R.id.StudentGender);
             address = itemView.findViewById(R.id.StudentAddress);
             updateinfo = itemView.findViewById(R.id.UpdateInfo);
-
         }
     }
 }
