@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".departments.DepartmentHomepage"
+    android:orientation="vertical"
+    android:layout_margin="16dp">
+    <Button
+        android:id="@+id/DepartmentInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Department Info"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/FacultyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faculty Info"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/Routine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Routine"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

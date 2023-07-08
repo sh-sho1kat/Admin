@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "964045651857",
+    "project_id": "university-management-sy-fb6cf",
+    "storage_bucket": "university-management-sy-fb6cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964045651857:android:695eec6daf507f65e0a430",
+        "android_client_info": {
+          "package_name": "com.example.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964045651857-gv4hl9jc4fps02of3ijtqh8512t51kio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc4Ejsa0B3XFLexAbKiW2NacuB45qBndM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964045651857-gv4hl9jc4fps02of3ijtqh8512t51kio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

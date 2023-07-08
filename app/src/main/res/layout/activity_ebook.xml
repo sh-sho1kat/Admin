@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ebook_image"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload EBook"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/AddTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:hint="Add Title"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500" />
+
+    <Button
+        android:id="@+id/chooseFileButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Choose File"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Upload"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewvisibility"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showTitle"
+            android:drawableLeft="@drawable/baseline_picture_as_pdf_24"
+            android:textSize="20dp"
+            android:drawablePadding="15dp"
+            android:padding="8dp"
+            android:textColor="@color/Black"
+            android:textColorHighlight="@color/cardview_dark_background" />
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
