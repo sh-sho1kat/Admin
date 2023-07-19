@@ -3,16 +3,144 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/WhiteSmoke"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".userpart.ui.home.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/white"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/lavender"
+                    android:layout_margin="10dp"
+                    android:elevation="20dp"
+                    app:cardCornerRadius="20dp"/>
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageslider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="20dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_corner_radius="20"
+                    app:iss_delay="3000"
+                    app:iss_title_background="@color/WhiteSmoke" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:textColor="@color/Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/lemonada_semibold"
+                android:gravity="center_horizontal"
+                android:text="RUET AT A GLANCE"
+                android:textSize="28dp" />
+
+
+            <TextView
+                android:textColor="@color/Indigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lemonada_semibold"
+                android:gravity="center_horizontal"
+                android:text="OverView"
+                android:textSize="24dp" />
+
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:textColor="@color/DimGray"
+                android:id="@+id/overView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/overview"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:colorClickableText="#039BE5"
+                app:trimCollapsedText="@string/read_more"
+                app:trimExpandedText="@string/read_less"
+                app:trimLines="5"
+                app:trimMode="trimModeLine" />
+
+            <TextView
+                android:textColor="@color/Indigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lemonada_semibold"
+                android:gravity="center_horizontal"
+                android:text="History"
+                android:textSize="24dp" />
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:textColor="@color/DimGray"
+                android:id="@+id/History"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/history"
+                android:textSize="20sp"
+                app:trimExpandedText="@string/read_less"
+                app:trimCollapsedText="@string/read_more"
+                app:trimMode="trimModeLine"
+                app:trimLines="5"
+                app:colorClickableText="#039BE5" />
+            <TextView
+                android:textColor="@color/Indigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lemonada_semibold"
+                android:gravity="center_horizontal"
+                android:text="Campus Details"
+                android:textSize="24dp" />
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:textColor="@color/DimGray"
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/campus_details"
+                android:textSize="20sp"
+                app:trimExpandedText="@string/read_less"
+                app:trimCollapsedText="@string/read_more"
+                app:trimMode="trimModeLine"
+                app:trimLines="5"
+                app:colorClickableText="#039BE5"
+                />
+
+            <ImageView
+                android:id="@+id/imagemap"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ruet6"
+                android:padding="1dp"
+                android:background="@drawable/red_minus_icon"
+                android:layout_marginBottom="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </FrameLayout>

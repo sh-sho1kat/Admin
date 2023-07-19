@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/PaleGreen"
-    tools:context=".userpart.ui.faculty.FacultyFragment">
+    tools:context=".userpart.ui.routine.RoutineFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Faculty"
+        android:text="Routine"
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/white"/>

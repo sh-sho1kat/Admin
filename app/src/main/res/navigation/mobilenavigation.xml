@@ -21,10 +21,10 @@
         android:label="Home"
         tools:layout="@layout/fragment_home"/>
 
-     <fragment android:id="@+id/navigation_faculty"
-        android:name="com.example.admin.userpart.ui.faculty.FacultyFragment"
-        android:label="Faculty"
-        tools:layout="@layout/fragment_faculty"/>
+     <fragment android:id="@+id/navigation_routine"
+        android:name="com.example.admin.userpart.ui.routine.RoutineFragment"
+        android:label="Routine"
+        tools:layout="@layout/fragment_routine"/>
 
      <fragment android:id="@+id/navigation_notice"
         android:name="com.example.admin.userpart.ui.notice.NoticeFragment"

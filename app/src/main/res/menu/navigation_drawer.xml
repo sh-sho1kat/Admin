@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/faculty"
+        android:title="Faculty"
+        android:icon="@drawable/faculty_24" />
+    <item
+        android:id="@+id/department"
+        android:title="Department"
+        android:icon="@drawable/gallary_24"/>
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/faculty_24"/>
+    <item
+        android:id="@+id/themes"
+        android:title="Themes"
+        android:icon="@drawable/notice_24"/>
+    <item
+        android:id="@+id/share"
+        android:title="Share This App"
+        android:icon="@drawable/faculty_24"/>
+    <item
+        android:id="@+id/developer"
+        android:title="Developer"
+        android:icon="@drawable/notice_24"/>
+    <item
+        android:id="@+id/logout"
+        android:title="Log Out"
+        android:icon="@drawable/faculty_24"/>
+
+</menu>

@@ -14,9 +14,9 @@
         android:title=""
         android:enabled="false"/>
     <item
-        android:id="@+id/faculty"
-        android:title="Faculty"
-        android:icon="@drawable/faculty_24"/>
+        android:id="@+id/routine"
+        android:title="Routine"
+        android:icon="@drawable/baseline_routine_24"/>
     <item
         android:id="@+id/notice"
         android:title="Notice"
