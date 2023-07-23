@@ -21,11 +21,13 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherV
     private List<TeacherData> list;
     private Context context;
     private String catagory;
+    private String appselect;
 
-    public TeacherAdapter(List<TeacherData> list,String catagory, Context context) {
+    public TeacherAdapter(List<TeacherData> list,String catagory, Context context,String appselect) {
         this.list = list;
         this.context = context;
         this.catagory = catagory;
+        this.appselect = appselect;
     }
 
     @NonNull
@@ -47,7 +49,10 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherV
         holder.email.setText(item.getEmail());
         downloadurl=item.getImage();
         Picasso.get().load(item.getImage()).into(holder.imageView);
-
+        if(appselect.equals("user"))
+        {
+            holder.update.setVisibility(View.INVISIBLE);
+        }
         holder.update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

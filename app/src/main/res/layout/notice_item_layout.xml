@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/student_avatar"/>
+            <TextView
+                android:id="@+id/adminName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Panel"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="date: "
+                    android:textSize="16dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time: "
+                    android:textSize="16dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27-03-23"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:12 PM"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title of notice will appear here"
+            android:textSize="17dp"
+            android:textColor="@color/Gray"/>
+        <ImageView
+            android:id="@+id/notice_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -76,7 +76,7 @@ public class Add_Student extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference().child("Students");
         storageReference = FirebaseStorage.getInstance().getReference().child("Students");
 
-        String[] items = new String[]{"Select Catagory","Department of Electrical and Electronic Engineering","Department of Computer Science and Engineering","Department of Civil Engineering","Department of Mechanical Engineering","Departmnet of Electrical and Computer Engineering","Department of Electronic and Telecommunication Engineering","Department of Industrial and Production Engineering","Department of Architecture"};
+        String[] items = new String[]{"Select Catagory","Electrical and Electronic Engineering","Computer Science and Engineering","Civil Engineering","Mechanical Engineering","Electrical and Computer Engineering","Electronic and Telecommunication Engineering","Industrial and Production Engineering","Architecture"};
         StudentDepartment.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,items));
 
         StudentDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

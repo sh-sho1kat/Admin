@@ -16,6 +16,15 @@
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".userpart.developer.developer"
+            android:exported="false" />
+        <activity
+            android:name=".userpart.profile.MyProfile"
+            android:exported="false" />
+        <activity
+            android:name=".userpart.userfaculty.DisplayFacultyInfo"
+            android:exported="false" />
+        <activity
             android:name=".userpart.FullImageView"
             android:exported="false" />
         <activity

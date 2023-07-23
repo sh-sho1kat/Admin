@@ -1,4 +1,4 @@
-package com.example.admin.adminpart.faculty;
+package com.example.admin.userpart.userfaculty;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.admin.R;
+import com.example.admin.adminpart.faculty.Add_Teachers;
+import com.example.admin.adminpart.faculty.TeacherAdapter;
+import com.example.admin.adminpart.faculty.TeacherData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class update_faculty extends AppCompatActivity {
+public class DisplayFacultyInfo extends AppCompatActivity {
 
     FloatingActionButton fab;
     private RecyclerView viceChancellor,eceFaculty,civilFaculty,meFaculty,humFaculty;
@@ -36,7 +39,7 @@ public class update_faculty extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_faculty);
+        setContentView(R.layout.activity_display_faculty_info);
 
         viceChancellor = findViewById(R.id.viceChancellor);
         eceFaculty = findViewById(R.id.eceFaculty);
@@ -58,15 +61,6 @@ public class update_faculty extends AppCompatActivity {
         meFaculty();
         humFaculty();
 
-
-        fab = findViewById(R.id.fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(update_faculty.this,Add_Teachers.class));
-            }
-        });
     }
 
     private void viceChancellor() {
@@ -91,9 +85,9 @@ public class update_faculty extends AppCompatActivity {
                         TeacherData data = snapshot.getValue(TeacherData.class);
                         list1.add(data);
                         viceChancellor.setHasFixedSize(true);
-                        viceChancellor.setLayoutManager(new LinearLayoutManager(update_faculty.this));
+                        viceChancellor.setLayoutManager(new LinearLayoutManager(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this));
 
-                        adapter = new TeacherAdapter(list1,"Vice Chancellor",update_faculty.this,"admin");
+                        adapter = new TeacherAdapter(list1,"Vice Chancellor", com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this,"user");
                         viceChancellor.setAdapter(adapter);
                     }
                 }
@@ -101,7 +95,7 @@ public class update_faculty extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(update_faculty.this, "Database Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this, "Database Error", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -129,9 +123,9 @@ public class update_faculty extends AppCompatActivity {
                         TeacherData data = snapshot.getValue(TeacherData.class);
                         list2.add(data);
                         eceFaculty.setHasFixedSize(true);
-                        eceFaculty.setLayoutManager(new LinearLayoutManager(update_faculty.this));
+                        eceFaculty.setLayoutManager(new LinearLayoutManager(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this));
 
-                        adapter = new TeacherAdapter(list2,"Faculty of Electrical and Computer Engineering",update_faculty.this,"admin");
+                        adapter = new TeacherAdapter(list2,"Faculty of Electrical and Computer Engineering", com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this,"user");
                         eceFaculty.setAdapter(adapter);
                     }
                 }
@@ -139,7 +133,7 @@ public class update_faculty extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(update_faculty.this, "Database Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this, "Database Error", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -167,9 +161,9 @@ public class update_faculty extends AppCompatActivity {
                         TeacherData data = snapshot.getValue(TeacherData.class);
                         list3.add(data);
                         civilFaculty.setHasFixedSize(true);
-                        civilFaculty.setLayoutManager(new LinearLayoutManager(update_faculty.this));
+                        civilFaculty.setLayoutManager(new LinearLayoutManager(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this));
 
-                        adapter = new TeacherAdapter(list3,"Faculty of Civil Engineering",update_faculty.this,"admin");
+                        adapter = new TeacherAdapter(list3,"Faculty of Civil Engineering", com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this,"user");
                         civilFaculty.setAdapter(adapter);
                     }
                 }
@@ -177,7 +171,7 @@ public class update_faculty extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(update_faculty.this, "Database Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this, "Database Error", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -205,9 +199,9 @@ public class update_faculty extends AppCompatActivity {
                         TeacherData data = snapshot.getValue(TeacherData.class);
                         list4.add(data);
                         meFaculty.setHasFixedSize(true);
-                        meFaculty.setLayoutManager(new LinearLayoutManager(update_faculty.this));
+                        meFaculty.setLayoutManager(new LinearLayoutManager(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this));
 
-                        adapter = new TeacherAdapter(list4,"Faculty of Mechanical Engineering",update_faculty.this,"admin");
+                        adapter = new TeacherAdapter(list4,"Faculty of Mechanical Engineering", com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this,"user");
                         meFaculty.setAdapter(adapter);
                     }
                 }
@@ -215,7 +209,7 @@ public class update_faculty extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(update_faculty.this, "Database Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this, "Database Error", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -243,9 +237,9 @@ public class update_faculty extends AppCompatActivity {
                         TeacherData data = snapshot.getValue(TeacherData.class);
                         list5.add(data);
                         humFaculty.setHasFixedSize(true);
-                        humFaculty.setLayoutManager(new LinearLayoutManager(update_faculty.this));
+                        humFaculty.setLayoutManager(new LinearLayoutManager(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this));
 
-                        adapter = new TeacherAdapter(list5,"Faculty of Humanities",update_faculty.this,"admin");
+                        adapter = new TeacherAdapter(list5,"Faculty of Humanities", com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this,"user");
                         humFaculty.setAdapter(adapter);
                     }
                 }
@@ -253,7 +247,7 @@ public class update_faculty extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(update_faculty.this, "Database Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.admin.userpart.userfaculty.DisplayFacultyInfo.this, "Database Error", Toast.LENGTH_SHORT).show();
             }
         });
 

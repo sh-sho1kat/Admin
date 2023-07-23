@@ -2,7 +2,7 @@ package com.example.admin.adminpart.students;
 
 public class StudentData {
     public String id,email;
-    String name,department,phone,gender,address,image,key;
+    public String name,department,phone,gender,address,image,key;
 
     public StudentData(){
 

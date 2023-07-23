@@ -54,7 +54,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
                 Intent intent = new Intent(context, Update_Student.class);
                 intent.putExtra("id",item.getId());
                 intent.putExtra("name",item.getName());
-                intent.putExtra("name",item.getDepartment());
+                intent.putExtra("department",item.getDepartment());
                 intent.putExtra("phone",item.getPhone());
                 intent.putExtra("email",item.getEmail());
                 intent.putExtra("gender",item.getGender());

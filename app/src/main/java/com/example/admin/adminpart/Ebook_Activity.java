@@ -92,7 +92,7 @@ public class Ebook_Activity extends AppCompatActivity {
                 final String uniquekey = databaseReference.push().getKey();
 
                 HashMap data = new HashMap();
-                data.put("addtitle",addtitle.getText().toString());
+                data.put("title",addtitle.getText().toString());
                 data.put("pdfurl",downloadurl);
 
                 databaseReference.child(uniquekey).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {

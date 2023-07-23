@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class UserLoginActivity extends AppCompatActivity {
     private EditText StudentID, Password;
     String UserID = "";
-    String password = "", Email;
+    String password = "", Email,imageUrl;
     private DatabaseReference reference;
     private FirebaseAuth mAuth;
     private ArrayList<StudentData> list;
@@ -114,18 +114,22 @@ public class UserLoginActivity extends AppCompatActivity {
                         } else {
                             StudentData studentData = list.get(0);
                             Email = studentData.email;
-                            login(Email,password);
+                            UserID = studentData.id;
+                            imageUrl = studentData.getImage();
+                            login(Email,password,UserID,imageUrl,studentData);
                         }
                     }
                     PB.dismiss();
                 }
-                private void login(String email, String pass) {
+                private void login(String email, String pass,String id,String imageUrl,StudentData studentData) {
                     mAuth.signInWithEmailAndPassword(email, pass)
                             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                 @Override
                                 public void onSuccess(AuthResult authResult) {
                                     Toast.makeText(UserLoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(UserLoginActivity.this, UserMainActivity.class);
+                                    intent.putExtra("userID",id);
+                                    intent.putExtra("imageURL",imageUrl);
                                     startActivity(intent);
                                     finish();
                                 }
