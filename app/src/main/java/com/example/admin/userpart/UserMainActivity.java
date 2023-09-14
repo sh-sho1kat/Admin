@@ -31,6 +31,7 @@ import com.example.admin.adminpart.students.StudentAdapter;
 import com.example.admin.adminpart.students.StudentData;
 import com.example.admin.adminpart.students.Student_Activity;
 import com.example.admin.databinding.ActivityLandingPageBinding;
+import com.example.admin.userpart.about.About_Activity;
 import com.example.admin.userpart.developer.developer;
 import com.example.admin.userpart.login.UserLoginActivity;
 import com.example.admin.userpart.profile.MyProfile;
@@ -185,7 +186,9 @@ public class UserMainActivity extends AppCompatActivity implements NavigationVie
                 break;
 
             case R.id.about:
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                intent = new Intent(UserMainActivity.this, About_Activity.class);
+                intent.putExtra("userID",getIntent().getStringExtra("userID"));
+                startActivity(intent);
                 break;
 
             case R.id.rating:
