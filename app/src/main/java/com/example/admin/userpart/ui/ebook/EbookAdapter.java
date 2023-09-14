@@ -1,6 +1,8 @@
 package com.example.admin.userpart.ui.ebook;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,13 +44,18 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"New Activity", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context,PdfViewerActivity.class);
+                intent.putExtra("pdfUrl",list.get(position).getPdfurl());
+                context.startActivity(intent);
             }
         });
         holder.ebookdownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Eureka", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(list.get(position).getPdfurl()));
+                context.startActivity(intent);
+                view.setVisibility(View.GONE);
             }
         });
     }

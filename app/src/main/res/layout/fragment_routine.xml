@@ -6,6 +6,24 @@
     android:background="@color/PaleGreen"
     tools:context=".userpart.ui.routine.RoutineFragment">
 
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:layout_marginTop="400dp"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:id="@+id/depttext"-->
+<!--            android:background="@color/Blue"-->
+<!--            android:textColor="@color/Beige"-->
+<!--            android:text="Eureka"/>-->
+
+<!--    </LinearLayout>-->
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RoutineRecycler"
         android:layout_width="match_parent"
@@ -15,5 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/progressBar"/>
+
+
+
+
 
 </FrameLayout>

@@ -9,38 +9,54 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.admin.R;
 import com.example.admin.adminpart.departments.facultymembers.FacultyInformation;
 import com.example.admin.adminpart.faculty.update_faculty;
+import com.example.admin.adminpart.students.StudentAdapter;
 import com.example.admin.adminpart.students.StudentData;
+import com.example.admin.adminpart.students.Student_Activity;
 import com.example.admin.databinding.ActivityLandingPageBinding;
 import com.example.admin.userpart.developer.developer;
 import com.example.admin.userpart.login.UserLoginActivity;
 import com.example.admin.userpart.profile.MyProfile;
 import com.example.admin.userpart.rating.RateUsDialogue;
+import com.example.admin.userpart.showdepartment.Show_Department_Info;
 import com.example.admin.userpart.ui.ebook.EbookFragment;
 import com.example.admin.userpart.ui.routine.RoutineFragment;
 import com.example.admin.userpart.ui.gallary.GallaryFragment;
 import com.example.admin.userpart.ui.home.HomeFragment;
 import com.example.admin.userpart.ui.notice.NoticeFragment;
 import com.example.admin.userpart.userfaculty.DisplayFacultyInfo;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.security.acl.Group;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class UserMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -50,9 +66,8 @@ public class UserMainActivity extends AppCompatActivity implements NavigationVie
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private FloatingActionButton home;
-    private boolean isMediaVisible= false;
+    private ArrayList<StudentData> list;
     Intent intent;
-    //private String UserId = getIntent().getStringExtra("userID");
     private ImageView circle;
 
     @SuppressLint("RestrictedApi")
@@ -98,9 +113,8 @@ public class UserMainActivity extends AppCompatActivity implements NavigationVie
                     break;
 
                 case R.id.routine:
-                    String dept="CSE";
                     Bundle bundle = new Bundle();
-                    bundle.putString("dept", dept);
+                    bundle.putString("userID",getIntent().getStringExtra("userID"));
                     RoutineFragment routineFragment = new RoutineFragment();
                     routineFragment.setArguments(bundle);
                     replaceFragment(routineFragment);
@@ -141,8 +155,6 @@ public class UserMainActivity extends AppCompatActivity implements NavigationVie
             }
         });
     }
-
-
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -169,6 +181,7 @@ public class UserMainActivity extends AppCompatActivity implements NavigationVie
                 break;
 
             case R.id.department:
+                showPopupMenu(findViewById(R.id.department));
                 break;
 
             case R.id.about:
@@ -198,6 +211,63 @@ public class UserMainActivity extends AppCompatActivity implements NavigationVie
 
         }
         return true;
+    }
+
+    private void showPopupMenu(View view) {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        popupMenu.getMenuInflater().inflate(R.menu.pop_up_menu, popupMenu.getMenu());
+
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.CSE:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","CSE");
+                        startActivity(intent);
+                        return true;
+                    case R.id.EEE:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","EEE");
+                        startActivity(intent);
+                        return true;
+                    case R.id.ECE:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","ECE");
+                        startActivity(intent);
+                        return true;
+                    case R.id.ETE:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","ETE");
+                        startActivity(intent);
+                        return true;
+                    case R.id.Civil:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","Civil");
+                        startActivity(intent);
+                        return true;
+                    case R.id.Mechanical:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","Mechanical");
+                        startActivity(intent);
+                        return true;
+                    case R.id.IPE:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","IPE");
+                        startActivity(intent);
+                        return true;
+                    case R.id.Architecture:
+                        intent = new Intent(UserMainActivity.this, Show_Department_Info.class);
+                        intent.putExtra("dept","Architecture");
+                        startActivity(intent);
+                        return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
+        popupMenu.show();
     }
 
     private void shareapp() {

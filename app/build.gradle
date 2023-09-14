@@ -61,5 +61,7 @@ dependencies {
 
     implementation group: "pl.openrnd.android", name: "multi-level-listview", version: "1.0.1"
 
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
 
 }

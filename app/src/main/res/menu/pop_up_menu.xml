@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/CSE"
+        android:title="@string/CSE" />
+
+    <item
+        android:id="@+id/EEE"
+        android:title="@string/EEE" />
+
+    <item
+        android:id="@+id/ECE"
+        android:title="@string/ECE" />
+
+    <item
+        android:id="@+id/ETE"
+        android:title="@string/ETE" />
+
+    <item
+        android:id="@+id/Civil"
+        android:title="@string/Civil" />
+    <item
+        android:id="@+id/Mechanical"
+        android:title="@string/Mechanical" />
+    <item
+        android:id="@+id/IPE"
+        android:title="@string/IPE" />
+    <item
+        android:id="@+id/Architecture"
+        android:title="@string/architecture" />
+
+
+
+
+</menu>
