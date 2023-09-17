@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:orientation="horizontal"
-        android:background="@color/LavenderBlush"
+        android:background="#2196F3"
         android:padding="5dp">
         <ImageView
             android:layout_width="30dp"

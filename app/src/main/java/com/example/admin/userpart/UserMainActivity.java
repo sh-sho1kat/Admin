@@ -275,7 +275,7 @@ public class UserMainActivity extends AppCompatActivity implements NavigationVie
 
     private void shareapp() {
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.putExtra(Intent.EXTRA_TEXT,"https://console.firebase.google.com/project/university-management-sy-fb6cf/database/university-management-sy-fb6cf-default-rtdb/data");
+        intent.putExtra(Intent.EXTRA_TEXT,"https://drive.google.com/drive/folders/10AQoRYM0ncIlsn8LDvLpiJ_cth-NnOV2?usp=drive_link");
         intent.setType("text/plain");
         startActivity(Intent.createChooser(intent,"Share Via"));
     }
