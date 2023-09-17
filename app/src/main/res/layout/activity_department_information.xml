@@ -54,7 +54,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/UpdateHeadMessage"
-                android:text="Update"/>
+                android:text="Update"
+                android:backgroundTint="#3F51B5"
+                android:fontFamily="@font/artifika"
+                android:padding="5dp"
+                app:cornerRadius="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -93,7 +97,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/UpdateDepartmentMessage"
-                android:text="Update"/>
+                android:text="Update"
+                android:backgroundTint="#3F51B5"
+                android:fontFamily="@font/artifika"
+                android:padding="5dp"
+                app:cornerRadius="5dp"/>
 
         </LinearLayout>
 

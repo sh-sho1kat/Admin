@@ -27,14 +27,20 @@
             android:text="Clear"
             android:layout_weight="1"
             android:layout_margin="4dp"
-            android:padding="4dp"/>
+            android:backgroundTint="#3F51B5"
+            android:fontFamily="@font/artifika"
+            android:padding="5dp"
+            app:cornerRadius="5dp"/>
         <Button
             android:id="@+id/UpdtaeInformation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Update"
             android:layout_weight="1"
-            android:padding="4dp"
+            android:backgroundTint="#3F51B5"
+            android:fontFamily="@font/artifika"
+            android:padding="5dp"
+            app:cornerRadius="5dp"
             android:layout_margin="4dp"/>
 
     </LinearLayout>

@@ -29,7 +29,11 @@
             android:layout_height="match_parent"
             android:text="Search"
             android:layout_marginTop="16dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="#3F51B5"
+            android:fontFamily="@font/artifika"
+            android:padding="5dp"
+            app:cornerRadius="5dp"/>
 
 
         <View

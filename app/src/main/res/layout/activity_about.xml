@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".userpart.about.About_Activity"
-    android:background="@drawable/white_background">
+    android:background="@drawable/background_gradient">
 
   <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
@@ -15,7 +15,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/PowderBlue">
 
       <TextView
           android:layout_width="match_parent"
@@ -23,14 +24,14 @@
           android:text="Message From Head"
           android:gravity="center"
           android:textStyle="bold"
-          android:textSize="22dp"
+          android:textSize="28dp"
           android:textColor="@color/Black"
-          android:layout_marginTop="16dp"/>
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp"/>
       <View
           android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:background="@color/DimGray"
-          android:layout_marginVertical="8dp"/>
+          android:layout_height="4dp"
+          android:background="@color/DimGray" />
 
       <TextView
           android:layout_width="match_parent"
@@ -59,14 +60,14 @@
           android:text="About Department"
           android:gravity="center"
           android:textStyle="bold"
-          android:textSize="22dp"
+          android:textSize="26dp"
           android:textColor="@color/Black"
-          android:layout_marginTop="40dp"/>
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp"/>
       <View
           android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:background="@color/DimGray"
-          android:layout_marginVertical="8dp"/>
+          android:layout_height="4dp"
+          android:background="@color/DimGray" />
 
       <TextView
           android:layout_width="match_parent"

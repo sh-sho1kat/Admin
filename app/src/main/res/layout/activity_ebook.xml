@@ -42,7 +42,11 @@
         android:layout_height="50dp"
         android:text="Choose File"
         android:layout_marginTop="16dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:backgroundTint="#3F51B5"
+        android:fontFamily="@font/artifika"
+        android:padding="5dp"
+        app:cornerRadius="5dp"/>
 
     <Button
         android:id="@+id/uploadButton"
@@ -50,7 +54,11 @@
         android:layout_height="50dp"
         android:text="Upload"
         android:layout_marginTop="16dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:backgroundTint="#3F51B5"
+        android:fontFamily="@font/artifika"
+        android:padding="5dp"
+        app:cornerRadius="5dp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewvisibility"

@@ -13,9 +13,21 @@
         android:label="UMS"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
         tools:replace="android:label"
         tools:targetApi="31">
+        <activity
+            android:name=".adminpart.login.UserName_Updated"
+            android:exported="false" />
+        <activity
+            android:name=".adminpart.login.Change_UserName"
+            android:exported="false" />
+        <activity
+            android:name=".adminpart.login.Password_Updated_Message"
+            android:exported="false" />
+        <activity
+            android:name=".adminpart.login.update_password"
+            android:exported="false" />
         <activity
             android:name=".userpart.showdepartment.Show_Department_Info"
             android:exported="false" />
@@ -41,7 +53,7 @@
             android:name=".userpart.login.ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".adminpart.LoginActivity"
+            android:name=".adminpart.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".userpart.login.UserRegisterActivity"

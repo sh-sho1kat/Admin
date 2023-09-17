@@ -12,18 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Department Info"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:backgroundTint="#3F51B5"
+        android:fontFamily="@font/artifika"
+        android:padding="5dp"
+        app:cornerRadius="5dp"/>
     <Button
         android:id="@+id/FacultyInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Faculty Info"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:backgroundTint="#3F51B5"
+        android:fontFamily="@font/artifika"
+        android:padding="5dp"
+        app:cornerRadius="5dp"/>
     <Button
         android:id="@+id/Routine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Routine"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:backgroundTint="#3F51B5"
+        android:fontFamily="@font/artifika"
+        android:padding="5dp"
+        app:cornerRadius="5dp"/>
 
 </LinearLayout>
