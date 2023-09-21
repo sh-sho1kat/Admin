@@ -46,7 +46,7 @@ The User Part is designed to cater specifically to university students, offering
 
 - UI/UX: The user interface is designed to be intuitive, with navigation drawers and bottom navigation enhancing the user experience.
 
-  <img src="https://github.com/sh-sho1kat/University-Management-System/blob/main/app/src/main/res/screenshot/Screenshot_20230920_234736.jpg">
+  <img src="https://github.com/sh-sho1kat/University-Management-System/blob/main/app/src/main/res/screenshot/Screenshot%20from%202023-09-21%2019-58-09.png">
 
 
 
